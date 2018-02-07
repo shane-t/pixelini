@@ -1,0 +1,46 @@
+
+* {
+  box-sizing: border-box;
+}
+.grid { 
+  border-collapse: collapse;
+  display:table;
+  background-image: url(Transparency500.png)
+}
+
+.grid .row, .grid .cell {
+  margin: 0;
+  padding: 0; 
+  border: 0;
+}
+
+.grid .row {
+  display: table-row;
+}
+.grid .cell {
+  border: 1px solid black;
+  display: table-cell;
+  width: 16px;
+  height: 16px;
+}
+
+.paletteContainer .cell {
+  border: 1px solid black;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+.cell:hover {
+  border: 1px solid #ccc;
+  cursor: crosshair;
+}
+
+canvas {
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -o-crisp-edges;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+}

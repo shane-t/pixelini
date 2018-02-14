@@ -1,11 +1,12 @@
 import { connect } from 'react-redux';
-import Preview from './Preview';
+import Preview from '../components/Preview';
 
 const mapStateToProps = state => {
+
   return { 
-    cells : state.cells,
-    numRows : state.numRows,
-    numColumns : state.numColumns
+    cells : state.present.cells,
+    numRows : state.present.numRows,
+    numColumns : state.present.numColumns
   }
 }
 

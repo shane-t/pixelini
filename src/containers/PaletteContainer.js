@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
-import { setSelectedColor } from './actions';
-import Palette from './Palette';
+import { setSelectedColor } from '../actions';
+import Palette from '../components/Palette';
 
 function mapStateToProps (state) {
   return { 
-    selectedColor : state.selectedColor,
-    colors : state.colors
+    selectedColor : state.present.selectedColor,
+    colors : state.present.colors
   };
 }
 

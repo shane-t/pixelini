@@ -1,10 +1,15 @@
-export const SET_CELL_COLOR = 'SET_CELL_COLOR';
-export const SET_SELECTED_COLOR = 'SET_SELECTED_COLOR';
-export const CLEAR_GRID = 'CLEAR_GRID';
-export const TRANSLATE_UP = 'TRANSLATE_UP';
-export const TRANSLATE_DOWN = 'TRANSLATE_DOWN';
-export const TRANSLATE_LEFT = 'TRANSLATE_LEFT';
-export const TRANSLATE_RIGHT = 'TRANSLATE_RIGHT';
+import {
+  SET_CELL_COLOR,
+  SET_SELECTED_COLOR,
+  CLEAR_GRID,
+  TRANSLATE_UP,
+  TRANSLATE_DOWN,
+  TRANSLATE_LEFT,
+  TRANSLATE_RIGHT,
+  OPEN_FILE,
+  SET_ROWS,
+  SET_COLUMNS
+} from './actionTypes';
 
 export function setCellColor (x, y, color) {
   return { 
@@ -49,5 +54,29 @@ export function translateLeft () {
 export function translateRight () {
   return {
     type : TRANSLATE_RIGHT
+  }
+}
+
+
+export function openFile (x, y, cells) {
+  return {
+    type : OPEN_FILE,
+    cells,
+		x,
+		y
+  }
+}
+
+export function setColumns (columns) {
+  return {
+    type : SET_COLUMNS,
+    columns
+  }
+}
+
+export function setRows (rows) {
+  return {
+    type : SET_ROWS,
+    rows
   }
 }

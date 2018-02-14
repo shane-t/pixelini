@@ -1,0 +1,11 @@
+export const SET_CELL_COLOR = 'SET_CELL_COLOR';
+export const SET_SELECTED_COLOR = 'SET_SELECTED_COLOR';
+export const CLEAR_GRID = 'CLEAR_GRID';
+export const TRANSLATE_UP = 'TRANSLATE_UP';
+export const TRANSLATE_DOWN = 'TRANSLATE_DOWN';
+export const TRANSLATE_LEFT = 'TRANSLATE_LEFT';
+export const TRANSLATE_RIGHT = 'TRANSLATE_RIGHT';
+export const OPEN_FILE = 'OPEN_FILE';
+export const SET_ROWS = 'SET_ROWS';
+export const SET_COLUMNS = 'SET_COLUMNS';
+

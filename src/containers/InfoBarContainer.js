@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
-import InfoBar from './InfoBar';
+import InfoBar from '../components/InfoBar';
 
 const mapStateToProps = state => {
   return { 
-    selectedColor : state.selectedColor,
-    numColumns : state.numColumns,
-    numRows : state.numRows
+    selectedColor : state.present.selectedColor,
+    numColumns : state.present.numColumns,
+    numRows : state.present.numRows
   }
 }
 

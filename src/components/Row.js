@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ColoredCell from './ColoredCell';
+import ColoredCell from '../containers/ColoredCell';
 
 class Row extends Component {
   render() {

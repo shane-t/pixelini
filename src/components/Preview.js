@@ -1,5 +1,5 @@
 import React from 'react';
-import colors from './colors';
+import colors from '../colors';
 
 class Preview extends React.Component {
   
@@ -12,7 +12,7 @@ class Preview extends React.Component {
     ctx.imageSmoothingEnabled = false;
     for (let i = 0; i<=this.props.cells.length-1; i++) {
       for (let j = 0; j<=this.props.cells[i].length-1; j++) {
-        if (this.props.cells[i][j].color.name !== prevProps.cells[i][j].color.name) {
+        if (!prevProps[i] || !prevProps[j] || this.props.cells[i][j].color.name !== prevProps.cells[i][j].color.name) {
           if (this.props.cells[i][j].color.name === 'Transparent') {
             ctx.fillStyle = 'black';
             ctx.globalCompositeOperation = 'xor';

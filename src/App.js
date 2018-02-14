@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Grid from './Grid';
-import PaletteContainer from './PaletteContainer';
-import InfoBarContainer from './InfoBarContainer';
-import PreviewContainer from './PreviewContainer';
-import ToolsContainer from './ToolsContainer';
+import Grid from './components/Grid';
+import PaletteContainer from './containers/PaletteContainer';
+import InfoBarContainer from './containers/InfoBarContainer';
+import PreviewContainer from './containers/PreviewContainer';
+import ToolsContainer from './containers/ToolsContainer';
 import './App.css';
 import store from './store';
 import { Provider } from 'react-redux';
@@ -12,7 +12,7 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    const { numColumns, numRows } = store.getState();
+    const { numColumns, numRows } = store.getState().present;
 		this.cols = numColumns;
 		this.rows = numRows;
   }

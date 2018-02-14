@@ -5,10 +5,11 @@ import {
   TRANSLATE_UP,
   TRANSLATE_DOWN,
   TRANSLATE_LEFT,
-  TRANSLATE_RIGHT
-} from './actions';
-import { initialRows, initialColumns } from './config';
-import colors from './colors';
+  TRANSLATE_RIGHT,
+  OPEN_FILE
+} from '../actions/actionTypes';
+import { initialRows, initialColumns } from '../config';
+import colors from '../colors';
 
 const initialState = {
   selectedColor : colors.BLACK,
@@ -20,6 +21,8 @@ const initialState = {
 
 export default function pixelApp(state = initialState, action) {
   switch (action.type) {
+      case OPEN_FILE:
+        return { ...state, cells: action.cells, numRows : action.y, numColumns: action.x };
       case TRANSLATE_UP:
         return { ...state,
           cells : [ ...state.cells.slice(1, state.cells.length), state.cells[0] ]

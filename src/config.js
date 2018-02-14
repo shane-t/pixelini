@@ -1,2 +1,2 @@
-export const initialRows = 16;
-export const initialColumns = 16;
+export const initialRows = 32;
+export const initialColumns = 32;
